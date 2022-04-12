@@ -1,0 +1,25 @@
+{
+  "name": "sample-api-graphql",
+  "version": "1.0.0",
+  "description": "Sample API with Graphql",
+  "main": "index.js",
+  "author": "Abel Menezes <https://github.com/abelsco>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "npx nodemon --exec babel-node src/index.js -e js,gql"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.17.6",
+    "@babel/core": "^7.17.9",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "@graphql-tools/load-files": "^6.5.3",
+    "apollo-server": "^3.6.7",
+    "graphql": "^16.3.0",
+    "graphql-tools": "^8.2.5",
+    "mongoose": "^6.2.10"
+  }
+}

@@ -1,0 +1,8 @@
+version: '3.4'
+
+services:
+  graphqlathlete:
+    image: graphqlathlete
+    build:
+      context: .
+      dockerfile: ./Dockerfile

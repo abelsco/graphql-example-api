@@ -1,0 +1,21 @@
+type Time {
+  _id: ID!
+  last: String!
+  user: User!
+}
+
+input TimeInput {
+  last: String!
+  user: ID!
+}
+
+type Query {
+  getTimes: [Time!]!
+  getTime(id: ID!): Time!
+}
+
+type Mutation {
+  createTime(data: TimeInput!): Time!
+  updateTime(id: ID!, data: TimeInput!): Time!
+  DeleteTime(id: ID!): Boolean
+}

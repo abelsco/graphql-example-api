@@ -5,11 +5,6 @@ function startServer({ typeDefs, resolvers }) {
   mongoose.connect("mongodb://db:27017/graphql", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
-    auth: {
-      authSource: "admin",
-    },
-    user: "mongo",
-    pass: "mongo",
   });
   const server = new ApolloServer({ typeDefs, resolvers });
   server.listen({ port: 4001 }).then(({ url }) => {

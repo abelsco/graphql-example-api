@@ -2,12 +2,13 @@ scalar DateTime
 
 type Time {
   _id: ID!
-  last: DateTime!
+  description: String!
+  created: DateTime!
   user: User!
 }
 
 input TimeInput {
-  last: DateTime!
+  description: String!
   user: ID!
 }
 

@@ -1,9 +1,13 @@
 import mongoose from "mongoose";
 
 const Schema = new mongoose.Schema({
-  last: {
+  description: {
+    type: String,
+    default: "Entrada",
+  },
+  created: {
     type: Date,
-    required: true,
+    default: Date.now,
   },
   user: {
     type: mongoose.Schema.Types.ObjectId,

@@ -11,8 +11,8 @@ export default {
   },
   Mutation: {
     createTime: (_, { data }) => Time.create(data),
-    updateTime: (_, { id, data }) =>
-      Time.findByIdAndUpdate(id, data, { new: true }),
+    updateTime: async (_, { id, data }) =>
+      await Time.findByIdAndUpdate(id, data, { new: true }),
     deleteTime: async (_, { id }) => !!(await Time.findByIdAndDelete(id)),
   },
 };

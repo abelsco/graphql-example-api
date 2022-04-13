@@ -8,6 +8,7 @@ const Schema = new mongoose.Schema({
   user: {
     type: String,
     required: true,
+    unique: true,
   },
   pass: {
     type: String,

@@ -1,11 +1,13 @@
+scalar DateTime
+
 type Time {
   _id: ID!
-  last: String!
+  last: DateTime!
   user: User!
 }
 
 input TimeInput {
-  last: String!
+  last: DateTime!
   user: ID!
 }
 
@@ -17,5 +19,5 @@ type Query {
 type Mutation {
   createTime(data: TimeInput!): Time!
   updateTime(id: ID!, data: TimeInput!): Time!
-  DeleteTime(id: ID!): Boolean
+  deleteTime(id: ID!): Boolean
 }

@@ -2,7 +2,7 @@ import { ApolloServer } from "apollo-server";
 import mongoose from "mongoose";
 
 function startServer({ typeDefs, resolvers }) {
-  mongoose.connect("mongodb://db:27017/graphql", {
+  mongoose.connect("mongodb://mongo:mongo@db:27017", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   });

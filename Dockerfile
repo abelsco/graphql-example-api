@@ -1,4 +1,4 @@
-FROM node:latest
+FROM node:current-alpine
 LABEL Name=sampleapi Version=0.0.1
 
 WORKDIR /code
